@@ -1,7 +1,5 @@
 package com.github.nenadjakic.ocrstudio.task.entity
 
-import net.sourceforge.tess4j.ITesseract.RenderedFormat
-
 class OcrConfig(
     var language: String = "eng",
     var ocrEngineMode: OcrEngineMode = OcrEngineMode.DEFAULT,
@@ -36,12 +34,6 @@ class OcrConfig(
     }
     enum class FileFormat {
         PDF, HOCR, TEXT;
-
-        fun toRenderedFormat(): RenderedFormat = when (this) {
-            PDF -> RenderedFormat.PDF
-            HOCR -> RenderedFormat.HOCR
-            TEXT -> RenderedFormat.TEXT
-        }
 
         fun getExtension(): String = when (this) {
             PDF -> "pdf"

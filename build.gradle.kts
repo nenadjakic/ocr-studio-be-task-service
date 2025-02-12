@@ -29,7 +29,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-    implementation("net.sourceforge.tess4j:tess4j:5.14.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
