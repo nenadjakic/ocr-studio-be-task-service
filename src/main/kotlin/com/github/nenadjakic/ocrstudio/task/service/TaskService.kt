@@ -1,6 +1,7 @@
 package com.github.nenadjakic.ocrstudio.task.service
 
 import com.github.nenadjakic.ocrstudio.task.config.MessageConst
+import com.github.nenadjakic.ocrstudio.task.dto.StatusCount
 import com.github.nenadjakic.ocrstudio.task.entity.*
 import com.github.nenadjakic.ocrstudio.task.exception.MissingDocumentException
 import com.github.nenadjakic.ocrstudio.task.repository.TaskRepository
@@ -109,4 +110,8 @@ class TaskService(
 
     fun update(id: UUID, schedulerConfig: SchedulerConfig): Int =
         taskRepository.updateSchedulerConfigById(id, schedulerConfig)
+
+    fun getCountByStatus(): List<StatusCount> = taskRepository.countTasksByStatus()
+
+    fun getAverageInDocuments(): Long = taskRepository.averageInDocuments()
 }

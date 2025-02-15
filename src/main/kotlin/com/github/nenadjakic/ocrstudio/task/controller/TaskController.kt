@@ -26,7 +26,7 @@ import java.util.*
 
 @Tag(name = "Task controller", description = "API endpoints for managing task entities.")
 @RestController
-@RequestMapping("/task")
+@RequestMapping("/api/v1/task")
 @Validated
 class TaskController(
     private val taskService: TaskService,
